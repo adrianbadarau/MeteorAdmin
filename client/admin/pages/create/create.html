@@ -1,0 +1,20 @@
+<template name="admin_pages_create">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Create new Page</h3>
+        </div>
+        <div class="col-md-2 col-md-offset-4"><button class="btn btn-success btn-lg">PUBLISH</button></div>
+    </div>
+    <div class="form-group">
+        <label>Page Title</label>
+        <input class="form-control" name="page_title" placeholder="Enter page title">
+    </div>
+    <div id="summernote">
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger">Cancel</button>
+        <button type="button" class="btn btn-primary" id="save_page">Save</button>
+        <button type="button" class="btn btn-info">Preview</button>
+    </div>
+</template>

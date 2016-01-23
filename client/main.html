@@ -1,9 +1,12 @@
 <body>
-    <div id="wrapper">
-        {{ renderContent }}
-    </div>
+    {{ renderContent }}
 </body>
 
 <template name="main">
-    {{> nav_bar}}
+    <div id="wrapper">
+        {{> nav_bar}}
+        <div id="page-wrapper" class="container">
+            {{> yield }}
+        </div>
+    </div>
 </template>
