@@ -120,7 +120,12 @@
             <ul class="nav navbar-nav side-nav">
                 {{#each nav_items }}
                     <li class="">
-                        <a href="{{ route }}"><i class="{{ icon }}"></i> {{label}}</a>
+                        <a href="{{ route }}"><i class="{{ icon }}"></i> {{label}}
+                            {{#if action_button.icon }}
+                                <a href="{{ action_button.route }}"> <i class="{{action_button.icon}}"></i> {{ action_button.label }} </a>
+                            {{/if}}
+
+                        </a>
                     </li>
                 {{/each}}
             </ul>

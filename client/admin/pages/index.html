@@ -1,0 +1,36 @@
+<template name="admin_pages_index">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{ page_title }}
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Last Edited</th>
+                            <th>Options</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#each pages }}
+                            <tr>
+                                <td>{{@index}}</td>
+                                <td>{{title}}</td>
+                                <td>{{updated_at}}</td>
+                                <td><a href="#" class="btn btn-success">Do Something</a></td>
+                            </tr>
+                        {{/each }}
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+    </div>
+</template>
