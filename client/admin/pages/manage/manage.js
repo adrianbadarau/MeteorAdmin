@@ -2,7 +2,7 @@
  * Created by adrianbadarau on 23/01/16.
  */
 
-Template.admin_pages_create.events({
+Template.admin_pages_manage.events({
     'click #save_page': function (event) {
         event.preventDefault();
         var data = $('#summernote').summernote('code');
@@ -26,7 +26,7 @@ Template.admin_pages_create.events({
     }
 });
 
-Template.admin_pages_create.rendered = function () {
+Template.admin_pages_manage.rendered = function () {
     console.log(this);
     if(_.isUndefined(this.data.page._id)){
         $('#summernote').summernote({
