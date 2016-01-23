@@ -21,7 +21,7 @@ Template.admin_pages_manage.events({
                     content:data,
                     updated_at: new Date()
                 }
-            })
+            });
         }
     }
 });
