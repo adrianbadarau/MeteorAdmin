@@ -16,13 +16,18 @@ Meteor.startup(function(){
             action_button:{
                 route:'admin.pages.create',
                 icon:'fa fa-plus-square',
-                label:'Add Page'
+                label:'Add'
             }
         });
         MenuItems.insert({
             label:'Posts',
             route:'admin.posts',
-            icon: 'fa fa-file-text'
+            icon: 'fa fa-file-text',
+            action_button:{
+                route:'admin.posts.create',
+                icon: 'fa fa-plus-square',
+                label:'Add'
+            }
         });
     }
 });
