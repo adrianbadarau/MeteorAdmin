@@ -3,7 +3,7 @@
  */
 Template.admin_pages_index.helpers({
     page_title:function(){
-        return 'Pages Index';
+        return 'All Pages';
     }
 });
 

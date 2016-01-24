@@ -1,0 +1,21 @@
+<template name="admin_posts_manage">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Create new Post</h3>
+        </div>
+        <div class="col-md-2 col-md-offset-4"><button class="btn btn-success btn-lg">PUBLISH</button></div>
+    </div>
+    <div class="form-group">
+        <label>Post Title</label>
+        <input class="form-control" id="post_title" name="page_title" value="{{title}}" placeholder="Enter post title">
+    </div>
+    <div id="summernote">
+        {{{content}}}
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger">Cancel</button>
+        <button type="button" class="btn btn-primary" id="save_post">Save</button>
+        <button type="button" class="btn btn-info">Preview</button>
+    </div>
+</template>

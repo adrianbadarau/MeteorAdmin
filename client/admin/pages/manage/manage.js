@@ -28,7 +28,7 @@ Template.admin_pages_manage.events({
 
 Template.admin_pages_manage.rendered = function () {
     console.log(this);
-    if (_.isUndefined(this.data.page._id)) {
+    if (_.isUndefined(this.data)) {
         $('#summernote').summernote({
             height: 200,   // set editable area's height
             focus: true    // set focus editable area after Initialize summernote

@@ -1,0 +1,16 @@
+<body>
+<div class="container">
+    {{renderContent}}
+</div>
+</body>
+
+<template name="admin_posts_show">
+    <div class="row">
+        <div class="col-md-2 col-md-offset-10">
+            <button class="btn btn-lg btn-success" id="save_preview">SAVE</button>
+        </div>
+    </div>
+    <div id="page_preview" class="row">
+        {{{content}}}
+    </div>
+</template>
