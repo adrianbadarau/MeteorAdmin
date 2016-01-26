@@ -4,11 +4,11 @@
 
 Template.admin_pages_show.onRendered(function(){
     console.log(this);
+    //_.each(this.data.widgets,function(template_name, template_id){
+    //    Blaze.renderWithData(Template[template_name],'',document.getElementById(template_id))
+    //});
     $('#page_preview').summernote({
         airMode: true
-    });
-    $('#page_preview').on('summernote.change', function(we, contents, $editable) {
-        console.log('summernote\'s content is changed.',we,contents);
     });
 
 });
@@ -22,5 +22,11 @@ Template.admin_pages_show.events({
                 updated_at: new Date()
             }
         })
+    },
+    'click #add_widget':function(event){
+        event.preventDefault();
+        $('#page_preview').append("<div id='table_2'></div>");
+        Blaze.render(Template.widget_price_table,document.getElementById('table_2'));
+        $('#page_preview').summernote('reset');
     }
 });

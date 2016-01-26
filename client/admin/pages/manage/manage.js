@@ -7,7 +7,7 @@ Template.admin_pages_manage.events({
         event.preventDefault();
         var data = $('#summernote').summernote('code');
         console.log(this);
-        if (_.isUndefined(this.page._id)) {
+        if (_.isUndefined(this.page)) {
             Pages.insert({
                 title: $('#page_title').val(),
                 content: data,
@@ -19,6 +19,9 @@ Template.admin_pages_manage.events({
                 $set: {
                     title: $('#page_title').val(),
                     content: data,
+                    widgets:{
+                        'widget_price_table':"widget_price_table"
+                    },
                     updated_at: new Date()
                 }
             });
