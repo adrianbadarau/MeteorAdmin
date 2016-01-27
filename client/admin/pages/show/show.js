@@ -10,7 +10,15 @@ Template.admin_pages_show.onRendered(function(){
     $('#page_preview').summernote({
         airMode: true
     });
-
+    $('.note-editor').contextmenu({
+        target:'#context-menu',
+        before: function(e,context) {
+            // execute code before context menu if shown
+        },
+        onItem: function(context,e) {
+            // execute on menu item selection
+        }
+    });
 });
 
 Template.admin_pages_show.events({

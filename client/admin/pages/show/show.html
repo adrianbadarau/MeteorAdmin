@@ -11,8 +11,8 @@
             <button class="btn btn-lg btn-success" id="save_preview">SAVE</button>
         </div>
     </div>
-    <div id="page_preview" class="row">
+    <div id="page_preview" class="row" data-toggle="context" data-target="#context-menu">
         {{{content}}}
     </div>
-
+    {{> context_menu }}
 </template>
