@@ -7,8 +7,37 @@ Template.admin_pages_show.onRendered(function(){
     //_.each(this.data.widgets,function(template_name, template_id){
     //    Blaze.renderWithData(Template[template_name],'',document.getElementById(template_id))
     //});
+    var HelloButton = function (context) {
+        var ui = $.summernote.ui;
+
+        // create button
+        var button = ui.button({
+            contents: '<i class="fa fa-child"/> Hello',
+            tooltip: 'hello',
+            click: function () {
+                // invoke insertText method with 'hello' on editor module.
+                context.invoke('editor.insertText', 'hello');
+            }
+        });
+
+        return button.render();   // return button as jquery object
+    };
+
     $('#page_preview').summernote({
-        airMode: true
+        airMode: true,
+        popover: {
+            air:[
+                ['color', ['color']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['para', ['ul', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture']],
+                ['mybutton', ['hello']]
+            ]
+        },
+        buttons: {
+            hello: HelloButton
+        }
     });
     $('.note-editor').contextmenu({
         target:'#context-menu',
@@ -20,6 +49,7 @@ Template.admin_pages_show.onRendered(function(){
         }
     });
 });
+
 
 Template.admin_pages_show.events({
     'click #save_preview':function(event){
