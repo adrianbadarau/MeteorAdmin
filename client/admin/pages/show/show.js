@@ -12,11 +12,13 @@ Template.admin_pages_show.onRendered(function(){
 
         // create button
         var button = ui.button({
-            contents: '<i class="fa fa-child"/> Hello',
+            contents: '<i class="fa fa-cubes"/> Add Table',
             tooltip: 'hello',
             click: function () {
                 // invoke insertText method with 'hello' on editor module.
-                context.invoke('editor.insertText', 'hello');
+                $('#page_preview').append("<div id='table_2'></div>");
+                Blaze.render(Template.widget_price_table,document.getElementById('table_2'));
+                $('#page_preview').summernote('reset');
             }
         });
 
